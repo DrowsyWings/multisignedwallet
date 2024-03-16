@@ -1,0 +1,41 @@
+.transfer-approval {
+  text-align: center;
+}
+
+.transfer-approval-heading {
+  margin-bottom: 20px;
+}
+
+.transfer-approval-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.transfer-approval-table th {
+  background: #f0ece2;
+  padding: 10px;
+}
+
+.transfer-approval-table td {
+  background: #dfd3c3;
+  padding: 10px;
+}
+
+.transfer-approval-table tr:nth-child(even) td {
+  background: #c7b198;
+}
+
+.transfer-approval-table tr:last-child td {
+  background: #596e79;
+}
+
+.transfer-approval-table button {
+  background: rgb(123, 123, 52);
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.transfer-approval-table button:hover {
+  transform: scale(1.1);
+}
