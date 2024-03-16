@@ -23,12 +23,12 @@ function Transfer() {
       <h1 className="h1">Transfer Eth</h1>
       <label>
         Wei:
-        <input type="number" value={wei} onChange={handleWeiChange} />
+        <input type="number" value={wei} placeholder="Enter Your Wei Amount Here" onChange={handleWeiChange} />
       </label>
       <br />
       <label>
         To:
-        <input type="text" value={address} onChange={handleAddressChange} />
+        <input type="text" value={address} placeholder="Enter the Reciever Adress here" onChange={handleAddressChange} />
       </label>
       <br />
       <button className="send-eth-button" onClick={handleSendEth}>

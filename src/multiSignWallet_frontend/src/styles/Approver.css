@@ -1,8 +1,9 @@
 .approver {
-    border: 2px solid black;
     padding: 10px;
     background-color: #e7eaf6;
-    width: 40%;
+    width: 45%;
+    margin-left: 2%;
+    height: 17vh;
   }
   
   .approver h2 {

@@ -1,23 +1,30 @@
 .transfer-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: right;
     justify-content: center;
     height: 100vh;
+    width:250vh;
+  }
+  .transfer {
+    width: 45%;
+    height: 18vh ;
+    margin-left: 5%;
+    padding: 10px;
+
   }
   .h1 {
     background-color: #e7eaf6;
     color: #113f67;
-    padding: 10px;
+    padding: 7px; 
     margin-bottom: 10px;
-    width: 40%;
   }
   
   input[type="number"],
   input[type="text"] {
     background-color: #e7eaf6;
-    padding: 5px;
     margin-bottom: 5px;
+    margin-left: 2vh; 
     border-color: none;
   }
   
@@ -27,12 +34,13 @@
   
   input[type="text"] {
     width: 40%;
-    margin-left: 8px;
+    margin-left: 2.9vh;
   }
   
   button.send-eth-button {
     background-color: #a2a8d3;
     padding: 10px;
+    margin-left: 50vh;
     color: white;
     cursor: pointer;
   }
