@@ -7,13 +7,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e7eaf6;
+  background-color: #ffefed;
   padding: 30px;
   margin-bottom: 20px;
 }
 
 .navbar_title {
   font-size: 24px;
+  font-size: 2.2rem;
   color: #113f67;
 }
 

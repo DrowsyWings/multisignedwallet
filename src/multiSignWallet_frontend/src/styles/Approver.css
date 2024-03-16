@@ -1,13 +1,13 @@
 .approver {
     padding: 10px;
-    background-color: #e7eaf6;
+    background-color: #ffefed;
     width: 45%;
     margin-left: 2%;
     height: 17vh;
   }
   
   .approver h2 {
-    font-size: 24px;
+    font-size: 2rem;
     color: #113f67;
     text-decoration: solid underline;
     margin-bottom: 20px;
@@ -20,11 +20,13 @@
   }
   
   .approver li {
+    margin-left: 3vh;
     color: black;
     font-style: italic;
   }
   
   .approver p {
     color: grey;
+    margin-left: 2vh;
   }
   

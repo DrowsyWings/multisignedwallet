@@ -1,9 +1,19 @@
 .transfer-approval {
+  position: relative;
+  top: 5vh;
   text-align: center;
 }
 
 .transfer-approval-heading {
+  position: relative;
+  left: 43%;
+  border-radius: 5px;
   margin-bottom: 20px;
+  font-size: 2rem;
+  color: #113f67;
+  height: 4.5vh;
+  width: fit-content;
+  background-color: #ffefed;
 }
 
 .transfer-approval-table {
@@ -12,13 +22,35 @@
 }
 
 .transfer-approval-table th {
-  background: #f0ece2;
+  background: #ffefed;
+  color: #113f67;
   padding: 10px;
 }
+/* ---Splitting the table in required percentages ---*/
+.transfer-approval-table th:nth-child(1) {
+  width: 10%;
+ }
+ 
+ .transfer-approval-table th:nth-child(2) {
+  width: 20%;
+ }
+ 
+ .transfer-approval-table th:nth-child(3) {
+  width: 40%;
+ }
+ 
+ .transfer-approval-table th:nth-child(4) {
+  width: 15%;
+ }
+ 
+ .transfer-approval-table th:nth-child(5) {
+  width: 15%;
+ }
+ 
 
 .transfer-approval-table td {
   background: #dfd3c3;
-  padding: 10px;
+  padding: 18px;
 }
 
 .transfer-approval-table tr:nth-child(even) td {
@@ -26,11 +58,11 @@
 }
 
 .transfer-approval-table tr:last-child td {
-  background: #596e79;
+  background: #fff4e0ad;
 }
 
 .transfer-approval-table button {
-  background: rgb(123, 123, 52);
+  background: #ffdea0ad;
   padding: 5px 10px;
   border: none;
   cursor: pointer;

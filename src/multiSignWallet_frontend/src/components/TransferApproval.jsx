@@ -31,6 +31,7 @@ const TransferApproval = () => {
     <div className="transfer-approval">
       <h2 className="transfer-approval-heading">Transfer-Approvals</h2>
       <table className="transfer-approval-table">
+        
         <thead>
           <tr>
             <th>ID (Serial No.)</th>

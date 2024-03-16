@@ -7,7 +7,7 @@ function Approver() {
 
   return (
     <div className="approver">
-      <h2>Approvers Address</h2>
+      <h2>Approvers' Addresses</h2>
 
       <ul>
         {cryptoAddresses.map((address, index) => (

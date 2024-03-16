@@ -31,9 +31,13 @@ function Transfer() {
         <input type="text" value={address} placeholder="Enter the Reciever Adress here" onChange={handleAddressChange} />
       </label>
       <br />
-      <button className="send-eth-button" onClick={handleSendEth}>
-        Send Eth
-      </button>
+      <a href="#" className="send-eth-anchor" onClick={handleSendEth}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Send Eth
+    </a>
     </div>
   );
 }
