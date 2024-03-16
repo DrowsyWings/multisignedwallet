@@ -1,0 +1,29 @@
+.approver {
+    border: 2px solid black;
+    padding: 10px;
+    background-color: #e7eaf6;
+    width: 40%;
+  }
+  
+  .approver h2 {
+    font-size: 24px;
+    color: #113f67;
+    text-decoration: solid underline;
+    margin-bottom: 20px;
+  }
+  
+  .approver ul {
+    color: #a0b0b9;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .approver li {
+    color: black;
+    font-style: italic;
+  }
+  
+  .approver p {
+    color: grey;
+  }
+  
