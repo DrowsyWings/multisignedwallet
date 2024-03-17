@@ -1,34 +1,28 @@
-// App.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Approver from "./components/Approver";
 import Transfer from "./components/Transfer";
 import TransferApproval from "./components/TransferApproval";
-import ApproverForm from './components/ApproverForm';
-import TransferContext from './TransferContext'; // Import the context
+import ApproverForm from './components/ApproverForm'; // Adjust the import path as necessary
 import "./index.scss";
 
 function App() {
- const [transferData, setTransferData] = useState({ wei: 0, address: "" });
-
  return (
     <Router>
       <Navbar />
-      <TransferContext.Provider value={{ transferData, setTransferData }}>
-        <Routes>
-          <Route path="/" element={<ApproverForm />} />
-          <Route path="/original-app-page" element={
-            <div className="App">
-              <div className="SideBySideContainer">
-                <Approver />
-                <Transfer />
-              </div>
-              <TransferApproval />
+      <Routes>
+        <Route path="/" element={<ApproverForm />} />
+        <Route path="/original-app-page" element={
+          <div className="App">
+            <div className="SideBySideContainer">
+              <Approver />
+              <Transfer />
             </div>
-          } />
-        </Routes>
-      </TransferContext.Provider>
+            <TransferApproval />
+          </div>
+        } />
+      </Routes>
     </Router>
  );
 }
