@@ -1,0 +1,40 @@
+.AddressesInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AddressesInput>input {
+    height: 2rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+}
+.add {
+    position: relative;
+    top: 8vh;
+    left: -72vh;
+    height: 4vh;
+    width: 15vh;
+    background-color: #378ce7;
+    background-color: #378ce7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.submit {
+    position: relative;
+    top: 8vh;
+    right: 38vh;
+    height: 4vh;
+    width: 15vh;
+    background-color: #378ce7;
+    background-color: #378ce7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5)
+}

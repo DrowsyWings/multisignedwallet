@@ -10,6 +10,7 @@ function Transfer() {
  const weiNumber = Number(weiValue);
  if (!isNaN(weiNumber) && weiNumber >= 0) {
        setWei(weiNumber);
+       onAmountChange(weiNumber)
  } else {
        console.error('Invalid amount entered');
  }
@@ -40,7 +41,7 @@ function Transfer() {
       <h1 className="h1">Transfer ICP</h1>
       <label>
         ICP:
-        <input type="number" value={wei} placeholder="Enter Your ICP Amount Here" onChange={handleWeiChange} />
+        <input name="ICPbox" type="number" value={wei} placeholder="Enter Your ICP Amount Here" onChange={handleWeiChange} />
       </label>
       <br />
       <label>

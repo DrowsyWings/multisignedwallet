@@ -16,6 +16,7 @@
     "src/multiSignWallet_frontend"
   ],
   "dependencies": {
+    "react-native": "^0.73.6",
     "react-router-dom": "^6.22.3"
   }
 }

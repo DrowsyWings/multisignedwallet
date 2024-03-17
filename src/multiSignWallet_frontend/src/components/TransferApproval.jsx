@@ -4,9 +4,9 @@ import Transfer from "./Transfer";
 import "../styles/TransferApproval.css";
 
 const TransferApproval = () => {
-  const getAmount = () => {
+  const getAmount = (amount) => {
+    console.log("Amount received in TransferApproval:", amount);
     //  to get the amount
-
   };
 
   const getAddress = () => {

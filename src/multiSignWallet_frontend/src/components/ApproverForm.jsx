@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/ApproverForm.css'
 import { useNavigate } from 'react-router-dom';
 
 const ApproverForm = () => {
@@ -19,15 +20,15 @@ const ApproverForm = () => {
  };
 
  return (
-    <div>
+    <div className='AddressesInput'>
       <input
         type="text"
         placeholder="Enter Approver Address"
         value={approverAddress}
         onChange={(e) => setApproverAddress(e.target.value)}
       />
-      <button onClick={handleAddApprover}>Add Approver</button>
-      <button onClick={handleSubmit}>Submit</button>
+      <button className='add' onClick={handleAddApprover}>Add Approver</button>
+      <button className='submit' onClick={handleSubmit}>Submit</button>
     </div>
  );
 };
