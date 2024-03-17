@@ -6,24 +6,28 @@ import Transfer from "./components/Transfer";
 import TransferApproval from "./components/TransferApproval";
 import ApproverForm from './components/ApproverForm'; // Adjust the import path as necessary
 import "./index.scss";
+import { Provider } from 'react-redux'; // Import Provider
+import store from '../src/store/store'; // Import your Redux store
 
 function App() {
  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<ApproverForm />} />
-        <Route path="/original-app-page" element={
-          <div className="App">
-            <div className="SideBySideContainer">
-              <Approver />
-              <Transfer />
+    <Provider store={store}> 
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ApproverForm />} />
+          <Route path="/original-app-page" element={
+            <div className="App">
+              <div className="SideBySideContainer">
+                <Approver />
+                <Transfer />
+              </div>
+              <TransferApproval />
             </div>
-            <TransferApproval />
-          </div>
-        } />
-      </Routes>
-    </Router>
+          } />
+        </Routes>
+      </Router>
+    </Provider>
  );
 }
 

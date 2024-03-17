@@ -1,12 +1,16 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 import { useState } from "react";
 import Transfer from "./Transfer";
 import "../styles/TransferApproval.css";
 
 const TransferApproval = () => {
-  const getAmount = (amount) => {
-    console.log("Amount received in TransferApproval:", amount);
-    //  to get the amount
+  const address = useSelector(state => state.address);
+  const amount = useSelector(state => state.amount);
+ 
+  const getAmount = () => {
+     console.log("Amount received in TransferApproval:", amount);
+     // Use the amount as needed
   };
 
   const getAddress = () => {

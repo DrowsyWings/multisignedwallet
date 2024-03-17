@@ -1,25 +1,32 @@
 import React, { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { updateAddress, updateAmount } from '../actions';
 import "../styles/Transfer.css";
 
 function Transfer() {
+  const dispatch = useDispatch();
  const [wei, setWei] = useState(0);
  const [address, setAddress] = useState("");
 
  const handleWeiChange = (event) => {
- const weiValue = event.target.value;
- const weiNumber = Number(weiValue);
- if (!isNaN(weiNumber) && weiNumber >= 0) {
-       setWei(weiNumber);
-       onAmountChange(weiNumber)
- } else {
-       console.error('Invalid amount entered');
- }
+  const weiValue = event.target.value;
+  const weiNumber = Number(weiValue);
+  if (!isNaN(weiNumber) && weiNumber >= 0) {
+     setWei(weiNumber);
+     console.log('Dispatching updateAmount with:', weiNumber); // Debugging line
+     dispatch(updateAmount(weiNumber));
+  } else {
+     console.error('Invalid amount entered');
+  }
  };
-
+ 
  const handleAddressChange = (event) => {
-    setAddress(event.target.value);
+  const newAddress = event.target.value;
+  setAddress(newAddress);
+  console.log('Dispatching updateAddress with:', newAddress); // Debugging line
+  dispatch(updateAddress(newAddress));
  };
-
+ 
  const handleSendEth = async (event) => {
     event.preventDefault(); // Prevent the default action of the anchor tag
     try {
@@ -29,6 +36,7 @@ function Transfer() {
         memo: '123451231231',
       };
       const result = await window.ic.plug.requestTransfer(params);
+
       console.log(result);
       alert("ICP tokens sent successfully!");
     } catch (error) {
@@ -41,7 +49,7 @@ function Transfer() {
       <h1 className="h1">Transfer ICP</h1>
       <label>
         ICP:
-        <input name="ICPbox" type="number" value={wei} placeholder="Enter Your ICP Amount Here" onChange={handleWeiChange} />
+        <input  type="number" name="ICPbox" value={wei} placeholder="Enter Your ICP Amount Here" onChange={handleWeiChange} />
       </label>
       <br />
       <label>

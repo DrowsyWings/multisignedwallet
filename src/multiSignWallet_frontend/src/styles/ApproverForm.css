@@ -7,10 +7,12 @@
     height: 2rem;
     font-size: 1.3rem;
     border-radius: 5px;
+    margin-left: 28vh;
+    margin-top: 20vh;
 }
 .add {
     position: relative;
-    top: 8vh;
+    top: 18vh;
     left: -72vh;
     height: 4vh;
     width: 15vh;
@@ -25,8 +27,8 @@
 }
 .submit {
     position: relative;
-    top: 8vh;
-    right: 38vh;
+    top: 18vh;
+    right: 39vh;
     height: 4vh;
     width: 15vh;
     background-color: #378ce7;
