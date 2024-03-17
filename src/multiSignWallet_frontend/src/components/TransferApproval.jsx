@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import Transfer from "./Transfer";
 import "../styles/TransferApproval.css";
 
 const TransferApproval = () => {
   const getAmount = () => {
     //  to get the amount
+
   };
 
   const getAddress = () => {
@@ -36,7 +38,7 @@ const TransferApproval = () => {
           <tr>
             <th>ID (Serial No.)</th>
             <th>Amount</th>
-            <th>Address</th>
+            <th>To</th>
             <th>Approvals</th>
             <th>Sent</th>
           </tr>

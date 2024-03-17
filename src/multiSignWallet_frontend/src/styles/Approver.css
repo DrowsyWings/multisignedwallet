@@ -21,6 +21,7 @@
   
   .approver li {
     margin-left: 3vh;
+    font-size: 1.15rem;
     color: black;
     font-style: italic;
   }

@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Approver.css";
+
 function Approver() {
-  const cryptoAddresses = ["address1", "address2", "address3"]; // Define the crypto addresses array here
+ // Use useEffect to clear the local storage on component mount
+ useEffect(() => {
+    // This will run only once when the component mounts
+    localStorage.removeItem('approvers');
+ }, []); // Empty dependency array means this effect runs once on mount
 
-  const addressCount = cryptoAddresses.length; // Get the number of addresses
+ // Retrieve the stored approver addresses from local storage
+ const cryptoAddresses = JSON.parse(localStorage.getItem('approvers')) || [];
+ const addressCount = cryptoAddresses.length; // Get the number of addresses
 
-  return (
+ return (
     <div className="approver">
       <h2>Approvers' Addresses</h2>
 
@@ -16,7 +23,7 @@ function Approver() {
       </ul>
       <p>Number of Addresses: {addressCount}</p>
     </div>
-  );
+ );
 }
 
 export default Approver;
