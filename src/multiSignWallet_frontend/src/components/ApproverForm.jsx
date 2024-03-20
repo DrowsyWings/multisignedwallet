@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
-import '../styles/ApproverForm.css'
+import '../styles/ApproverForm.css';
 import { useNavigate } from 'react-router-dom';
 
 const ApproverForm = () => {
  const [approverAddress, setApproverAddress] = useState('');
+ const [approverCount, setApproverCount] = useState(0);
+ const [animateKeys, setAnimateKeys] = useState(false); // New state for animation
  const navigate = useNavigate();
 
  const handleAddApprover = () => {
-    // Store the current approver address in local storage
     const approvers = JSON.parse(localStorage.getItem('approvers')) || [];
     approvers.push(approverAddress);
     localStorage.setItem('approvers', JSON.stringify(approvers));
-    // Clear the input box
     setApproverAddress('');
+    setApproverCount(approverCount + 1);
  };
 
  const handleSubmit = () => {
-    navigate('/original-app-page');
+    setAnimateKeys(true); // Toggle the animation state
+    setTimeout(() => {
+      navigate('/original-app-page');
+    }, 3000);
  };
 
  return (
@@ -29,6 +33,14 @@ const ApproverForm = () => {
       />
       <button className='add' onClick={handleAddApprover}>Add Approver</button>
       <button className='submit' onClick={handleSubmit}>Submit</button>
+      <div className="locker">
+        <img src="/Locker1.png" alt="Locker" className="locker-image" />
+      </div>
+      <div className="keys">
+        {Array.from({ length: approverCount }).map((_, index) => (
+          <i key={index} className={`fas fa-key gold-icon ${animateKeys ? 'animate-key' : ''}`}></i>
+        ))}
+      </div>
     </div>
  );
 };

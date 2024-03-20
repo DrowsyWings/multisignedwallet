@@ -9,7 +9,7 @@ const Navbar = () => {
   console.log("Connect Wallet button clicked");  
   try {
       const publicKey = await window.ic.plug.requestConnect({
-        whitelist: ['qoctq-giaaa-aaaaa-aaaea-cai'],
+        whitelist: ['bkyz2-fmaaa-aaaaa-qaaaq-cai'],
         host: "https://mainnet.dfinity.network",
         onConnectionUpdate: () => {
           console.log(window.ic.plug.sessionManager.sessionData);
